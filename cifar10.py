@@ -8,7 +8,7 @@ import torch.nn.functional as F
 import torch.optim as optim
 import time
 
-batch_size = 10
+batch_size = 100
 epoch = 25
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
