@@ -44,14 +44,14 @@ class mnist(nn.Module):
         return xb
 
 
-device = torch.device('cpu')
-stat(mnist(), (1, 784, 100))  # 计算网络参数
+# device = torch.device('cpu')
+# stat(mnist(), (1, 784, 100))  # 计算网络参数
 model = mnist().to(device)  # 创建一个网络实例
 loss_func = F.cross_entropy  # 交叉熵损失函数
 optimizer = optim.Adam(model.parameters())  # adam优化器
 
-lr = 0.1  # 学习率
-epochs = 10  # 训练轮数
+lr = 0.05  # 学习率
+epochs = 20  # 训练轮数
 loss_plot = []  # 画图采样点
 
 train_start = time.time()
